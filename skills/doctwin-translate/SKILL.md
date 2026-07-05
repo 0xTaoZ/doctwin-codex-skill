@@ -205,4 +205,4 @@ requests no watermark:
 Copyright (c) 2026 Haitao Z / 0xTaoZ.
 
 GitHub: https://github.com/0xTaoZ
-Website: https://0xtaoz.github.io/doctwin-codex-skill
+Website / Project page: https://github.com/0xTaoZ/doctwin-codex-skill

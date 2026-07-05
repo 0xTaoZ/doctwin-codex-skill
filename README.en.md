@@ -86,6 +86,6 @@ DocTwin is not officially affiliated with those projects. Keep upstream attribut
 Copyright (c) 2026 **Haitao Z / 0xTaoZ**.
 
 - GitHub: [https://github.com/0xTaoZ](https://github.com/0xTaoZ)
-- Website: [https://0xtaoz.github.io/doctwin-codex-skill](https://0xtaoz.github.io/doctwin-codex-skill)
+- Website / Project page: [https://github.com/0xTaoZ/doctwin-codex-skill](https://github.com/0xTaoZ/doctwin-codex-skill)
 
 Released under AGPL-3.0. Redistribution, modification, network deployment, or derivative services must comply with AGPL-3.0 and retain copyright, attribution, and NOTICE files.
