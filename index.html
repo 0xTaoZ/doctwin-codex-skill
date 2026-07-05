@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DocTwin Translate</title>
+    <meta
+      name="description"
+      content="DocTwin Translate is an AI Agent Skill for layout-first bilingual PDF and document translation."
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --blue: #0ea5e9;
+        --ink: #0f172a;
+        --muted: #475569;
+        --line: #dbeafe;
+        --panel: #f8fafc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family:
+          ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+        color: var(--ink);
+        background: #ffffff;
+        line-height: 1.65;
+      }
+      main {
+        max-width: 1040px;
+        margin: 0 auto;
+        padding: 48px 24px 72px;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        align-items: center;
+        margin-bottom: 56px;
+      }
+      .brand {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        font-weight: 760;
+        font-size: 18px;
+      }
+      .logo {
+        width: 36px;
+        height: 36px;
+        border-radius: 9px;
+      }
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        font-size: 14px;
+      }
+      a {
+        color: #0369a1;
+        text-decoration: none;
+        font-weight: 650;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 32px;
+        align-items: center;
+        padding-bottom: 48px;
+        border-bottom: 1px solid var(--line);
+      }
+      h1 {
+        font-size: clamp(40px, 7vw, 76px);
+        line-height: 1;
+        margin: 0 0 20px;
+        letter-spacing: 0;
+      }
+      .lead {
+        font-size: 20px;
+        color: var(--muted);
+        margin: 0 0 28px;
+      }
+      .actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0 18px;
+        border-radius: 8px;
+        border: 1px solid #bae6fd;
+        background: #ffffff;
+      }
+      .primary {
+        background: var(--blue);
+        border-color: var(--blue);
+        color: #ffffff;
+      }
+      .preview {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 18px;
+        background: var(--panel);
+      }
+      .pages {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+      .page {
+        min-height: 220px;
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        padding: 16px;
+        box-shadow: 0 12px 32px rgba(14, 165, 233, 0.08);
+      }
+      .page h3 {
+        margin: 0 0 12px;
+        color: var(--blue);
+      }
+      .line {
+        height: 8px;
+        background: #e0f2fe;
+        border-radius: 999px;
+        margin: 10px 0;
+      }
+      .line.short {
+        width: 62%;
+      }
+      section {
+        padding: 40px 0 0;
+      }
+      h2 {
+        font-size: 28px;
+        margin: 0 0 16px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .item {
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 18px;
+        background: #ffffff;
+      }
+      .item strong {
+        display: block;
+        margin-bottom: 8px;
+      }
+      code,
+      pre {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      }
+      pre {
+        overflow: auto;
+        padding: 16px;
+        border-radius: 10px;
+        background: #0f172a;
+        color: #e0f2fe;
+      }
+      footer {
+        margin-top: 56px;
+        padding-top: 24px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 14px;
+      }
+      @media (max-width: 780px) {
+        nav,
+        .hero {
+          grid-template-columns: 1fr;
+        }
+        nav {
+          align-items: flex-start;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <nav>
+        <div class="brand">
+          <img class="logo" src="skills/doctwin-translate/assets/doctwin-logo.svg" alt="" />
+          <span>DocTwin Translate</span>
+        </div>
+        <div class="links">
+          <a href="README.md">简体中文</a>
+          <a href="README.zh-TW.md">繁體中文</a>
+          <a href="README.en.md">English</a>
+          <a href="https://github.com/0xTaoZ/doctwin-codex-skill">GitHub</a>
+        </div>
+      </nav>
+
+      <div class="hero">
+        <div>
+          <h1>把课件变成双语对照 PDF</h1>
+          <p class="lead">
+            DocTwin 是一个面向 AI Agent 的文档翻译 Skill：左侧保留原文，右侧生成译文，
+            优先保护公式、代码、图表、表格和页面结构。
+          </p>
+          <div class="actions">
+            <a class="button primary" href="https://github.com/0xTaoZ/doctwin-codex-skill">查看项目</a>
+            <a class="button" href="https://github.com/0xTaoZ/doctwin-codex-skill/releases/tag/v0.1.0">下载 v0.1.0</a>
+          </div>
+        </div>
+        <div class="preview" aria-label="Side-by-side bilingual PDF preview">
+          <div class="pages">
+            <div class="page">
+              <h3>Original</h3>
+              <div class="line"></div>
+              <div class="line short"></div>
+              <div class="line"></div>
+              <pre>int main() {
+  return 0;
+}</pre>
+            </div>
+            <div class="page">
+              <h3>简体中文</h3>
+              <div class="line"></div>
+              <div class="line short"></div>
+              <div class="line"></div>
+              <pre>int main() {
+  return 0;
+}</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section>
+        <h2>核心能力</h2>
+        <div class="grid">
+          <div class="item"><strong>双语对照</strong>左原文、右译文，适合啃课件和论文。</div>
+          <div class="item"><strong>版式优先</strong>尽量保留公式、代码、图表和表格位置。</div>
+          <div class="item"><strong>AI Agent 工作流</strong>Codex 一等适配，其他能运行脚本的 Agent 也可使用。</div>
+          <div class="item"><strong>术语一致</strong>使用 translation memory 和 glossary 控制专业词。</div>
+          <div class="item"><strong>渲染质检</strong>交付前检查页面截图，修复缺译、错位和乱码。</div>
+          <div class="item"><strong>版权水印</strong>默认给最终 PDF 加轻量 DocTwin 署名水印。</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>快速安装</h2>
+        <pre>mkdir -p ~/.codex/skills
+cp -R skills/doctwin-translate ~/.codex/skills/
+python3 -m pip install PyMuPDF PyYAML pillow pdfplumber pypdf reportlab</pre>
+        <p>
+          在 Codex 中调用：
+          <code>使用 $doctwin-translate 把这份 PDF 做成左右双语对照版。</code>
+        </p>
+      </section>
+
+      <footer>
+        Copyright © 2026 Haitao Z / 0xTaoZ.
+        Released under AGPL-3.0. Not officially affiliated with BabelDOC or PDFMathTranslate.
+      </footer>
+    </main>
+  </body>
+</html>
